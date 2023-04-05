@@ -1,0 +1,25 @@
+{% extends 'Myapp/base.html' %}
+{% block title %} LogIn {% endblock title %}
+{% block main_content %}
+<section class="container">
+    <div class="row justify-content-center mt-4">
+        <h1 class=""> Log | In</h1><br>
+    </div>
+    <h1 style =" margin:6px; font-size: 15px; text-align: center;"> Welcome back ! Please login to your account.</h1>
+    
+    <div class="row justify-content-center mt-4">
+        <div class='col-sm-5'>
+            <form action="" method="POST" class="bg-white" >
+                {% csrf_token %}
+                {{ forms.as_p }}
+                <h3 style =" font-size: 10px ;"> Don't have an account yet?<a href="home" style ="font-size: 10px;" >SignUp</a></h3>
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-primary justify-content-center btn-sm">Login</button>
+                    <a href="" style ="font-size: 10px; float: right; padding-right: 5px; text-decoration: underline;" >forget password</a>
+                </form> 
+            </form> 
+        </div>
+    </div>
+</section>
+{% endblock main_content %}
